@@ -3,7 +3,7 @@ Chat Application with Message Logging
 This project is a real-time chat platform developed for the Python Programming course. It enables instant communication between users while ensuring every message is securely logged for future retrieval and analysis.  
 🚀 Features
 
-    Real-Time Messaging: Instant message delivery using WebSocket technology.  
+    Real Time Messaging: Instant message delivery using WebSocket technology.  
 
     Message Logging: Automatic storage of all conversations in a database.  
 
@@ -25,7 +25,7 @@ This project is a real-time chat platform developed for the Python Programming c
 
     Toprak Türe (2200532): Backend Development. Responsible for server-side logic, API implementation, and the message logging system.  
 
-    Tolga Emir Ergene (2202113): Frontend Development. Responsible for the user interface, real-time message display, and frontend-backend integration.  
+    Tolga Emir Ergene (2202113): Frontend Development. Responsible for the user interface, real time message display, and frontend-backend integration.  
 
 📋 Development Roadmap
 
@@ -35,7 +35,7 @@ This project is a real-time chat platform developed for the Python Programming c
 
     Backend: Built server logic and message logging system.  
 
-    Frontend: Created chat screen and real-time display mechanisms.  
+    Frontend: Created chat screen and real time display mechanisms.  
 
     Integration: Connected frontend and backend using WebSockets.  
 
@@ -45,4 +45,4 @@ This project is a real-time chat platform developed for the Python Programming c
 
 💡 Motivation & Field
 
-This project operates in the field of Distributed Systems and Real-Time Communication. It solves the lack of persistence in simple chat apps by providing reliable data storage for auditing, debugging, and analytics.
+This project operates in the field of Distributed Systems and Real Time Communication. It solves the lack of persistence in simple chat apps by providing reliable data storage for auditing, debugging, and analytics.

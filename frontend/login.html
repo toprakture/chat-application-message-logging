@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Chat - Login</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="description" content="Login to Nexus Chat - A real-time communication platform">
+</head>
+<body>
+    <div class="glass-panel login-container">
+        <div class="login-header">
+            <h1>Nexus Chat</h1>
+            <p>Enter your username to join the conversation</p>
+        </div>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="" required autocomplete="off">
+            </div>
+            <button type="submit" class="btn">Join Chat</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.getElementById('username').value.trim();
+            if (!username) return;
+
+            try {
+                const response = await fetch('/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    localStorage.setItem('chat_username', data.username);
+                    window.location.href = '/chat';
+                } else {
+                    alert('Login failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Connection error');
+            }
+        });
+
+        // Redirect if already logged in
+        if (localStorage.getItem('chat_username')) {
+            window.location.href = '/chat';
+        }
+    </script>
+</body>
+</html>

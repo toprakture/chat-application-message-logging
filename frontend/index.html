@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Chat</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <meta name="description" content="Nexus Chat - Private Communication">
+</head>
+<body class="whatsapp-theme">
+    <div class="app-container glass-panel">
+        <!-- Sidebar: Contacts -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <div class="user-profile">
+                    <div class="avatar" id="currentUserAvatar"></div>
+                    <span id="currentUserName" style="font-weight: 600;">Loading...</span>
+                </div>
+            </div>
+            <div class="contact-list" id="contactList">
+                <!-- Contacts injected here -->
+            </div>
+            <div class="sidebar-footer">
+                <div class="footer-links">
+                    <button class="footer-btn" id="settingsBtn">Ayarlar</button>
+                    <button class="footer-btn" id="aboutBtn">About</button>
+                    <button class="footer-btn" id="legalBtn">Legal</button>
+                </div>
+                <button class="footer-btn logout-btn" id="logoutBtn">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="chat-area">
+            <div class="chat-header" id="chatHeader" style="display: none;">
+                <div class="user-profile">
+                    <div class="avatar" id="activeContactAvatar"></div>
+                    <span id="activeContactName" style="font-weight: 600;">Select a contact</span>
+                </div>
+            </div>
+            
+            <div class="chat-placeholder" id="chatPlaceholder">
+                <div class="placeholder-content">
+                    <h2>Nexus Chat</h2>
+                    <p>Select a contact to start messaging privately.</p>
+                </div>
+            </div>
+
+            <div class="chat-messages" id="chatMessages" style="display: none;">
+                <!-- Messages injected here -->
+            </div>
+            
+            <form class="chat-input-area" id="messageForm" style="display: none;">
+                <input type="text" id="messageInput" placeholder="Type a message" autocomplete="off" required>
+                <button type="submit" class="send-btn" aria-label="Send Message">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
